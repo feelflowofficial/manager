@@ -1,0 +1,12 @@
+server:
+  port: 8080
+
+  # ios 한글깨짐 방지
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+
+spring:
+  profiles:
+    active: local

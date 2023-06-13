@@ -1,0 +1,40 @@
+server:
+  port: 8081
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+  #Database 연결 정보
+  datasource:
+    databasereadwrite:
+      jdbc-url: jdbc:p6spy:h2:tcp://localhost/~/local
+      username: sa
+      password:
+        driver-class-name: org.h2.Driver
+
+    databasereadonly:
+      jdbc-url: jdbc:p6spy:h2:tcp://localhost/~/local
+      username: sa
+      password:
+        driver-class-name: org.h2.Driver
+
+#logging.level:
+#  org.hibernate.SQL: debug
+#  org.hibernate.orm.jdbc.bind: trace
+
+#  jpa:
+#    hibernate:
+#      ddl-auto: create
+#  properties:
+#    hibernate:
+      # show_sql: true
+      #format_sql: true
+      #use_sql_comments: true
+#  open-in-view: true #웹어플리케이션에서는 false, Admin은 true로 사용가능
+
+logging.level:
+  org.hibernate.SQL: debug
+  org.hibernate.orm.jdbc.bind: trace
+# org.hibernate.type: trace

@@ -1,0 +1,17 @@
+spring:
+  config:
+    activate:
+      on-profile: local
+
+  datasource:
+    databasereadwrite:
+      jdbc-url: jdbc:p6spy:h2:tcp://localhost/~/local
+      username: sa
+      password:
+        driver-class-name: org.h2.Driver
+
+    databasereadonly:
+      jdbc-url: jdbc:p6spy:h2:tcp://localhost/~/local
+      username: sa
+      password:
+        driver-class-name: org.h2.Driver
